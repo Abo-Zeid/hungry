@@ -9,14 +9,14 @@ class AppThemes {
         backgroundColor: Colors.white,
         centerTitle: true,
       ),
-      bottomNavigationBarTheme:  BottomNavigationBarThemeData(
-        backgroundColor:  Colors.white,
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        backgroundColor: AppColors.primaryColor,
+        selectedItemColor: AppColors.whiteColor,
+        unselectedItemColor: AppColors.accentColor,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
         elevation: 0,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: AppColors.primaryColor,
-        unselectedItemColor: AppColors.blackColor,
       ),
       colorScheme: ColorScheme.fromSeed(
           seedColor: AppColors.primaryColor, onSurface: AppColors.blackColor),
@@ -25,7 +25,7 @@ class AppThemes {
           filled: true,
           hintStyle: TextStyle(
             fontSize: 15,
-            color: AppColors.greyColor,
+            color: AppColors.accentColor,
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
