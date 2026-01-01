@@ -15,7 +15,6 @@ class CustomTextFormField extends StatefulWidget {
   @override
   State<CustomTextFormField> createState() => _CustomTextFormFieldState();
 }
-
 class _CustomTextFormFieldState extends State<CustomTextFormField> {
   late bool _obscureText;
   @override

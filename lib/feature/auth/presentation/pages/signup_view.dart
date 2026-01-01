@@ -24,57 +24,60 @@ class _SignUpViewState extends State<SignUpView> {
   final GlobalKey<FormState> formkey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.primaryColor,
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12.0),
-          child: Center(
-            child: Form(
-              key: formkey,
-              child: Column(
-                children: [
-                  Gap(100),
-                  SvgPicture.asset(AssetsIcon.logoSvg),
-                  Gap(60),
-                  CustomTextFormField(
-                    controller: nameController,
-                    hint: "Name",
-                    isObsecure: false,
-                  ),
-                  Gap(15),
-                  CustomTextFormField(
-                    controller: emialController,
-                    hint: "Emial",
-                    isObsecure: false,
-                  ),
-                  Gap(15),
-                  CustomTextFormField(
-                    controller: passwordController,
-                    hint: "Password",
-                    isObsecure: true,
-                  ),
-                  Gap(15),
-                  CustomTextFormField(
-                    controller: confirmPasswordController,
-                    hint: "Confirm Password",
-                    isObsecure: true,
-                  ),
-                  Gap(30),
-                  CustomButton(
-                    text: "Signup",
-                    fontWeight: FontWeight.w700,
-                    height: 45,
-                    fontsize: 17,
-                    onPressed: () {
-                      if (formkey.currentState!.validate()) {
-                        push(context, LoginView());
-                      }
-                    },
-                    isOutline: true,
-                    textColor: AppColors.primaryColor,
-                  )
-                ],
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).unfocus(),
+      child: Scaffold(
+        backgroundColor: AppColors.primaryColor,
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12.0),
+            child: Center(
+              child: Form(
+                key: formkey,
+                child: Column(
+                  children: [
+                    Gap(100),
+                    SvgPicture.asset(AssetsIcon.logoSvg),
+                    Gap(60),
+                    CustomTextFormField(
+                      controller: nameController,
+                      hint: "Name",
+                      isObsecure: false,
+                    ),
+                    Gap(15),
+                    CustomTextFormField(
+                      controller: emialController,
+                      hint: "Emial",
+                      isObsecure: false,
+                    ),
+                    Gap(15),
+                    CustomTextFormField(
+                      controller: passwordController,
+                      hint: "Password",
+                      isObsecure: true,
+                    ),
+                    Gap(15),
+                    CustomTextFormField(
+                      controller: confirmPasswordController,
+                      hint: "Confirm Password",
+                      isObsecure: true,
+                    ),
+                    Gap(30),
+                    CustomButton(
+                      text: "Signup",
+                      fontWeight: FontWeight.w700,
+                      height: 45,
+                      fontsize: 17,
+                      onPressed: () {
+                        if (formkey.currentState!.validate()) {
+                          push(context, LoginView());
+                        }
+                      },
+                      isOutline: true,
+                      textColor: AppColors.primaryColor,
+                    )
+                  ],
+                ),
               ),
             ),
           ),

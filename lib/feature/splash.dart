@@ -32,7 +32,7 @@ class _SplashViewState extends State<SplashView> {
             Spacer(flex: 1),
             SvgPicture.asset(AssetsIcon.logoSvg),
             Spacer(flex: 1),
-            Image.asset("assets/splash/splash.png")
+            Image.asset("assets/images/splash.png")
           ],
         ),
       ),

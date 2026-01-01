@@ -20,7 +20,12 @@ class _BottomNavBarState extends State<BottomNavBarView> {
 
   @override
   void initState() {
-    screens = [HomeView(), CartView(), OrderHistoryView(), ProfileView()];
+    screens = [
+      HomeView(),
+      CartView(),
+      OrderHistoryView(),
+      ProfileView(),
+    ];
     controller = PageController(initialPage: currentScreen);
     super.initState();
   }
@@ -29,6 +34,7 @@ class _BottomNavBarState extends State<BottomNavBarView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
+        physics: NeverScrollableScrollPhysics(),
         controller: controller,
         children: screens,
       ),

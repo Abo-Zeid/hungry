@@ -21,32 +21,30 @@ class AppThemes {
       colorScheme: ColorScheme.fromSeed(
           seedColor: AppColors.primaryColor, onSurface: AppColors.blackColor),
       inputDecorationTheme: const InputDecorationTheme(
-          fillColor: AppColors.accentColor,
+          fillColor: AppColors.whiteColor,
           filled: true,
           hintStyle: TextStyle(
             fontSize: 15,
             color: AppColors.accentColor,
           ),
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(
-              color: AppColors.borderColor,
-            ),
+            borderRadius: BorderRadius.all(Radius.circular(15)),
+            borderSide: BorderSide(color: AppColors.borderColor),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
+            borderRadius: BorderRadius.all(Radius.circular(15)),
             borderSide: BorderSide(
               color: AppColors.primaryColor,
             ),
           ),
           errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
+            borderRadius: BorderRadius.all(Radius.circular(15)),
             borderSide: BorderSide(
               color: AppColors.redColor,
             ),
           ),
           focusedErrorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
+            borderRadius: BorderRadius.all(Radius.circular(15)),
             borderSide: BorderSide(
               color: AppColors.redColor,
             ),

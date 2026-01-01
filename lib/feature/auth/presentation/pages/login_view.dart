@@ -18,51 +18,54 @@ class LoginView extends StatelessWidget {
     TextEditingController passwordController = TextEditingController();
     final GlobalKey<FormState> formkey = GlobalKey<FormState>();
 
-    return Scaffold(
-      backgroundColor: AppColors.primaryColor,
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12.0),
-          child: Center(
-            child: Form(
-              key: formkey,
-              child: Column(
-                children: [
-                  Gap(100),
-                  SvgPicture.asset(AssetsIcon.logoSvg),
-                  Gap(15),
-                  Text(
-                    "Weclome back to Fast Food World",
-                    style: AppTextStyle.getbodymTextStyle(context,
-                        color: AppColors.whiteColor),
-                  ),
-                  Gap(60),
-                  CustomTextFormField(
-                    controller: emialController,
-                    hint: "Emial",
-                    isObsecure: false,
-                  ),
-                  Gap(15),
-                  CustomTextFormField(
-                    controller: passwordController,
-                    hint: "Password",
-                    isObsecure: true,
-                  ),
-                  Gap(15),
-                  CustomButton(
-                    text: "Login",
-                    fontWeight: FontWeight.w700,
-                    height: 45,
-                    fontsize: 17,
-                    onPressed: () {
-                      if (formkey.currentState!.validate()) {
-                        push(context, SignUpView());
-                      }
-                    },
-                    isOutline: true,
-                    textColor: AppColors.primaryColor,
-                  )
-                ],
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).unfocus(),
+      child: Scaffold(
+        backgroundColor: AppColors.primaryColor,
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12.0),
+            child: Center(
+              child: Form(
+                key: formkey,
+                child: Column(
+                  children: [
+                    Gap(100),
+                    SvgPicture.asset(AssetsIcon.logoSvg),
+                    Gap(15),
+                    Text(
+                      "Weclome back to Fast Food World",
+                      style: AppTextStyle.getbodyTextStyle(context,
+                          color: AppColors.whiteColor),
+                    ),
+                    Gap(60),
+                    CustomTextFormField(
+                      controller: emialController,
+                      hint: "Emial",
+                      isObsecure: false,
+                    ),
+                    Gap(15),
+                    CustomTextFormField(
+                      controller: passwordController,
+                      hint: "Password",
+                      isObsecure: true,
+                    ),
+                    Gap(15),
+                    CustomButton(
+                      text: "Login",
+                      fontWeight: FontWeight.w700,
+                      height: 45,
+                      fontsize: 17,
+                      onPressed: () {
+                        if (formkey.currentState!.validate()) {
+                          push(context, SignUpView());
+                        }
+                      },
+                      isOutline: true,
+                      textColor: AppColors.primaryColor,
+                    )
+                  ],
+                ),
               ),
             ),
           ),

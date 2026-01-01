@@ -9,7 +9,7 @@ class AppTextStyle {
         color: color ?? Colors.white);
   }
 
-  static getbodymTextStyle(BuildContext context,
+  static getbodyTextStyle(BuildContext context,
       {double? fontSize, FontWeight? fontWeight, Color? color}) {
     return TextStyle(
         fontSize: fontSize ?? 16,
